@@ -7,6 +7,7 @@ var logger = require("morgan");
 // var indexRouter = require('./routes/index');
 // var usersRouter = require('./routes/users');
 var route = require("./Routes/authRoute");
+var taskRoutes = require("./Routes/taskroute");
 var route = require("./Routes/userRoute");
 var app = express();
 
@@ -20,6 +21,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 // app.use(express.static(path.join(__dirname, 'public')));
 app.use(route);
+app.use(taskRoutes);
 // app.use('/', indexRouter);
 // app.use('/users', usersRouter);
 
