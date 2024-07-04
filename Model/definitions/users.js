@@ -1,8 +1,8 @@
 const { Model, DataTypes } = require("sequelize");
 const sequelize = require("../../bin/dbConnections");
 
-class user extends Model {}
-user.init(
+class users extends Model {}
+users.init(
   {
     userId: {
       primaryKey: true,
@@ -26,4 +26,4 @@ user.init(
   }
 );
 
-module.exports = user;
+module.exports = users;
